@@ -1,36 +1,41 @@
 import React from "react";
 import layout from "../assets/portfolio/layout.png";
-import installNode from "../assets/portfolio/installNode.jpg";
-import navbar from "../assets/portfolio/navbar.jpg";
-import reactParallax from "../assets/portfolio/reactParallax.jpg";
-import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
-import reactWeather from "../assets/portfolio/reactWeather.jpg";
+import passwordGenerator from "../assets/portfolio/password.PNG";
+import emailTemplate from "../assets/portfolio/emailTemplate.PNG";
+import lanqLayout from "../assets/portfolio/lanq.PNG";
+import todoList from "../assets/portfolio/todo.PNG";
 
 const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
       src: layout,
+      href: "https://whimsical-halva-5727fe.netlify.app/",
+      code: "https://github.com/DevNov0/tailwind-layout",
     },
     {
       id: 2,
-      src: reactParallax,
+      src: lanqLayout,
+      href: "https://clever-otter-ee601f.netlify.app/",
+      code: "https://github.com/DevNov0/lanq-css-layout",
     },
     {
       id: 3,
-      src: navbar,
+      src: emailTemplate,
+      href: "https://spectacular-rugelach-23ade8.netlify.app",
+      code: "https://github.com/DevNov0/email-template",
     },
     {
       id: 4,
-      src: reactSmooth,
+      src: passwordGenerator,
+      href: "https://dreamy-sprite-998c1e.netlify.app/",
+      code: "https://github.com/DevNov0/Password-generator"
     },
     {
       id: 5,
-      src: installNode,
-    },
-    {
-      id: 6,
-      src: reactWeather,
+      src: todoList,
+      href: "https://singular-babka-51f57c.netlify.app/",
+      code: "https://github.com/DevNov0/Todo-list"
     },
   ];
 
@@ -48,7 +53,7 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src }) => (
+          {portfolios.map(({ id, src, href, code}) => (
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
               <img
                 src={src}
@@ -56,12 +61,15 @@ const Portfolio = () => {
                 className="rounded-md duration-200 hover:scale-105"
               />
               <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  Demo
-                </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+              <a href={href} className="">
+                <button className="w-1/2 px-6 py-0 my-0 duration-200 hover:scale-105">Demo</button>
+              </a>
+                <a href={code}>
+                  <button className="w-1/2 px-6 py-3 my-0 duration-200 hover:scale-105">
                   Code
                 </button>
+                </a>
+                
               </div>
             </div>
           ))}
