@@ -29,14 +29,14 @@ const Portfolio = () => {
       id: 4,
       src: passwordGenerator,
       href: "https://dreamy-sprite-998c1e.netlify.app/",
-      code: "https://github.com/DevNov0/Password-generator"
+      code: "https://github.com/DevNov0/Password-generator",
     },
     {
       id: 5,
       src: todoList,
       href: "https://singular-babka-51f57c.netlify.app/",
-      code: "https://github.com/DevNov0/Todo-list"
-    },
+      code: "https://github.com/DevNov0/Todo-list",
+    }
   ];
 
   return (
