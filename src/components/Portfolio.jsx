@@ -4,6 +4,7 @@ import passwordGenerator from "../assets/portfolio/password.PNG";
 import emailTemplate from "../assets/portfolio/emailTemplate.PNG";
 import lanqLayout from "../assets/portfolio/lanq.PNG";
 import todoList from "../assets/portfolio/todo.PNG";
+import stavebninyTanvald from "../assets/portfolio/stavebniny.PNG";
 
 const Portfolio = () => {
   const portfolios = [
@@ -36,6 +37,12 @@ const Portfolio = () => {
       src: todoList,
       href: "https://singular-babka-51f57c.netlify.app/",
       code: "https://github.com/DevNov0/Todo-list",
+    },
+    {
+      id: 6,
+      src: stavebninyTanvald,
+      href: "https://stavebniny-tanvald.cz/",
+      code: "",
     }
   ];
 
